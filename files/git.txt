@@ -1,0 +1,93 @@
+################################################################################
+#                                                                              #
+#                             Git Reference Card                               #
+#                                                                              #
+# @author   : kem0h <kem0h.0x90@gmail.com>                                     #
+# @version  : 1.0                                                              #
+# @license  : MIT                                                              #
+#                                                                              #
+################################################################################
+
+
+[writing commits]
+    
+    - short single line summary [50 char] (followed by a blank line and
+      a more complete description)
+    - use the present tense
+    - asteriks for bullet point
+    - clear and descriptive
+
+[git architecture]
+
+    +-----------+    add    +-----------+  commit   +--------+
+    |  working  | --------> |  staging  | --------> |  Repo  |
+    |   copy    | <-------- |   area    | <-------- |        |
+    +-----------+           +-----------+           +--------+
+
+[init repository]
+
+    git init                    # initialize a new git repository
+    git clone <url> [dir]       # clone a remote repository into dir
+
+[basic editing]
+    
+    git status                  # show the modification in the working copy
+    git add <file/dir>          # add file/dir to the staging area
+    git commit [-m "msg"]       # take a snapshot of the project
+
+    git diff [file]             # compare file in the working copy and the staging area
+    git diff --staged [file]    # compare file in the staging area and the repository
+
+    git rm <file>               # remove the file from the staging area and the working copy
+    git rm --cached <file>      # remove the file from the staging area only
+    git mv <file>               # move/rename file
+
+[undo things]
+
+    git commit --amend          # undo the last commit (can add files before to put them in the new commit)
+    git reset HEAD -- <file>    # unstage file
+    git checkout -- <file>      # undo change to the file 
+
+[remotes] ! This part has to be updated
+
+    git remote -v               # show remotes repositories with url
+    git remote add <name> <url> # add a shortcut <name> for repo at <url>
+    git fetch <remote>          # get the changes from the <remote> (need to merge locally after)
+    git pull <remote>           # get the changes from <remote> and merge it locally
+
+    git push <remote> <branch>  # push the changes from branch on the remote
+
+    git remote rename <old> <new> # rename a remote
+    git remote rm <name>        # delete a remote
+
+[tags]
+    
+    git tag                     # list tags
+    git tag -a <name> -m "msg"  # create an annotated tag (git object)
+    git tag <name>              # create a lightweight tag (reference to commit)
+    git tag -a <name> <commit>  # tag a previous commit
+
+[history view]
+
+    git log [options]           # view the repository history
+        --since=date
+        --until=date
+        --author=name
+        --grep=regex
+        -p (show diff)
+        
+[ignoring]
+
+    edit the '.gitignore' file in the project root directory
+
+[branches] ! This part has also to be updated
+    
+    git branch                  # list all branches
+    git branch <branch name>    # creates a new branch
+    git checkout <branch name>  # moves the HEAD pointer on branch name
+    git branch -d <branch name> # delete a branch
+    
+    git checkout master;
+    git merge <branch name>     # merge branch onto master
+
+# eof

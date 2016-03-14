@@ -1,0 +1,61 @@
+################################################################################
+#                                                                              #
+#                            TMUX Reference Card                               #
+#                                                                              #
+# @author   : kem0h <kem0h.0x90@gmail.com>                                     #
+# @version  : 1.0                                                              #
+# @license  : MIT                                                              #
+#                                                                              #
+################################################################################
+
+[commands]
+    tmux new -s <name>                  # creates new session
+    tmux attach -t <name>               # attach to an existing session
+    tmux detach                         # detach from a session
+    tmux kill-session -t <name>         # kill a session
+    tmux rename-session -t <old> <new>  # rename a session
+    tmux ls                             # list all sessions
+
++- session ---------------------+
+|                               |
+| +- window ---+ +- window ---+ |
+| |            | |            | |
+| | pane1      | |            | |
+| |            | |            | |
+| | pane2      | |            | |
+| |            | |            | |
+| +------------+ +------------+ |
++-------------------------------+
+
+[sessions] (set of windows)
+    
+    ^b :new -s <name>   # creates a new session
+    ^b $                # rename current session
+    ^b s                # list session
+
+[windows] (tabs)
+
+    ^b w                # list
+    ^b c                # create
+    ^b , <name>         # rename
+    ^b &                # close
+
+    ^b <0-9>            # goto number
+    ^b n                # next
+    ^b p                # previous
+
+[panes] (split windows)
+
+    ^b %                # split vert
+    ^b "                # split horiz
+    ^b !                # pane -> windows
+    ^b x                # kill pane
+
+    ^b <space>          # reorganize
+    ^b ^<arrow>         # resize
+    ^b <arrow>          # select
+    ^b {                # previous
+    ^b }                # next
+    ^b [ - (quit)       # scroll into the pane
+
+# eof

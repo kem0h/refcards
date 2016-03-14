@@ -1,0 +1,80 @@
+################################################################################
+#                                                                              #
+#                           Markdown Reference Card                            #
+#                                                                              #
+# @author   : kem0h <kem0h.0x90@gmail.com>                                     #
+# @version  : 1.0                                                              #
+# @license  : MIT                                                              #
+#                                                                              #
+################################################################################
+
+
+[headings]
+    
+    H1 title underlined
+    ===================
+
+    H2 title underlined
+    -------------------
+
+    # h1
+    ## h2
+    ### h3
+    #### h4
+    ##### h5
+
+[emphasis]
+
+    *italic* or _italic_
+    **bold** or __bold__
+
+[classical typo]
+ 
+    horizontal rule: --- or * * *
+    manual line break: end a line with two or more spaces
+
+[images]
+
+    ![alt text](/path/to/image "Title")
+
+[blockquotes]
+
+    > This is an example of blockquotes
+
+[lists]
+
+    ordered:
+    1. item A
+    2. item B
+    3. item C
+      1. item C.a
+      2. item C.b
+      ...
+
+    unordered:
+    * item A
+    * item B
+    * item C
+      * item C.a
+      * item C.b
+
+[links]
+
+    [example](http://url.com/ "Title")
+
+[code]
+
+    ```javascript
+    function test() {
+         console.log("look ma’, no spaces");
+    }
+    ```
+[escaping]
+    Backslash (\) escapes the following characters:
+    \ ` * _ { } [ ] ( ) # + - . !
+    \*this text is surrounded by literal asterisks\*
+
+    Avoid accidental numbered lists by escaping:
+    1918\. What a great season.
+
+# eof
